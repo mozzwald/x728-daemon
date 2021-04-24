@@ -1,0 +1,11 @@
+[Unit]
+Description=x728 UPS Service
+After=syslog.target
+
+[Service]
+ExecStart=/usr/local/sbin/x728.py
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=sysinit.target
